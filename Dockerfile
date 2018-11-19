@@ -6,7 +6,8 @@ LABEL Maintainer=Locitao
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y git python-setproctitle && \
     apt-get install -y sqlite && \
-    easy_install markdown Beautifulsoup
+    easy_install markdown Beautifulsoup && \
+    apt-get install -y mkdocs gcc
 
 # Clone the redo repository
 RUN git clone https://github.com/apenwarr/redo
